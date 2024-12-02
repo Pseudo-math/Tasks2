@@ -9,10 +9,10 @@ namespace AlgorithmsDataStructures {
 			var newList = new LinkedList<T>(list); // Не изменяем исходный список
 			return LengthOfListHelp(newList, 0);
 		}
-    private int LengthOfListHelp<T>(LinkedList<T> newList, int accLength) {
+   		private int LengthOfListHelp<T>(LinkedList<T> newList, int accLength) {
 			if (newList.Count == 0) return accLength;
 			newList.RemoveFirst();
-			return LengthOfList(newList, accLength + 1);
+			return  LengthOfListHelp(newList, accLength + 1);
 		}
 	}
 }
