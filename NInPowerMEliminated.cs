@@ -16,13 +16,15 @@ namespace AlgorithmsDataStructures {
 				n = 1 / n;
 				m = -m;
 			}
-		        if (m % 2 == 0) {
+			if (m % 2 == 0) {
 				n = n * n;
 				m = m / 2;
 			}
-			else 
+			else {
 				m--;
-		        return NInPowerM(n, m, acc);
+				acc = acc * n;
+			}
+		    	return NInPowerM(n, m, acc);
 		}
-	}    
+	}  
 }
