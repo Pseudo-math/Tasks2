@@ -5,7 +5,7 @@ namespace AlgorithmsDataStructures {
 
 	public class Recursion {
 
-		public static int LengthOfList<T>(LinkedList<T> list) {
+		public int LengthOfList<T>(LinkedList<T> list) {
 			var newList = new LinkedList<T>(list); // Не изменяем исходный список
 			return LengthOfListHelp(newList, 0);
 		}
