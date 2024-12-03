@@ -9,8 +9,7 @@ namespace AlgorithmsDataStructures {
 		}
 		public static double NInPowerMHelp(int n, int m, int acc) {
 			if (m == 0) return acc;
-			m--;
-		  return NInPowerMHelp(n, m, acc * n);
+		  return NInPowerMHelp(n, m - 1, acc * n);
 		}
 	}  
 }
