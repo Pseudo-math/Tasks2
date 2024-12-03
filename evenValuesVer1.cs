@@ -10,7 +10,7 @@ namespace AlgorithmsDataStructures {
 		}
    		private void evenValuesHelp<T>(LinkedList<T> list, int index) {
 			if (index == list.Count) return;
-	    if (list[index] % 2) Console.WriteLine(list[index]);
+	    		if (list[index] % 2) Console.WriteLine(list[index]);
 			evenValuesHelp(list, index + 1);
 		}
 	}
