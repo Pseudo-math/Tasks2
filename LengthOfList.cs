@@ -5,12 +5,11 @@ namespace AlgorithmsDataStructures {
 
 	public class Recursion {
 
-		public static int LengthOfList<T>(LinkedList<T> list, int accLength = 0) {
-			if (list.Count == 0) return accLength;
+		public static int LengthOfList<T>(LinkedList<T> list) {
+			if (list.Count == 0) return 0;
 			var newList = new LinkedList<T>(list); // Не изменяем исходный список
 			newList.RemoveFirst();
-
-			return LengthOfList(newList, accLength + 1);
+			return LengthOfList(newList) + 1;
 		}
 	}
 }
