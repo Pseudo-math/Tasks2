@@ -1,5 +1,3 @@
-package Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -49,8 +47,8 @@ class RecursionTest {
         list.add(10);
         list.add(20);
         list.add(30);
-        list.add(40);
         list.add(50);
+        list.add(40);
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outContent));
@@ -73,6 +71,21 @@ class RecursionTest {
 
         Java.RecursionSeventh.printSecondMax(list);
 
-        assertEquals("10\n", outContent.toString());
+        assertEquals("20\n", outContent.toString());
+    }
+    @Test
+    void printSecondMaxWithMaxInStart() {
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(20);
+        list.add(19);
+        list.add(20);
+        list.add(10);
+
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        Java.RecursionSeventh.printSecondMax(list);
+
+        assertEquals("20\n", outContent.toString());
     }
 }
