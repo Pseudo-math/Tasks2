@@ -17,6 +17,9 @@ public class RecursionSeventh {
             secondMax = firstMax;
             firstMax = current;
         }
+        else if (current > secondMax) {
+            secondMax = current;
+        }
         printSecondMax(list, firstMax, secondMax, index + 1);
     }
 }

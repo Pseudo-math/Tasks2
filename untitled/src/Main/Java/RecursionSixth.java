@@ -9,8 +9,7 @@ public class RecursionSixth {
 
     public static void printEvenIndexes(LinkedList<Integer> list, int index) {
         if (index >= list.size()) return;
-        if (index % 2 == 0)
-            System.out.println(list.get(index));
-        printEvenIndexes(list, index + 1);
+        System.out.println(list.get(index));
+        printEvenIndexes(list, index + 2);
     }
 }
