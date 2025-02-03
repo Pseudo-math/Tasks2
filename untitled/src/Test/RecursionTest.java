@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.LinkedList;
+import java.io.File;
 
 class RecursionTest {
 
@@ -87,5 +88,14 @@ class RecursionTest {
         Java.RecursionSeventh.printSecondMax(list);
 
         assertEquals("20\n", outContent.toString());
+    }
+    @Test
+    void recursionSearch() {
+        String filePath = "/home/mathematist/BobrovskiyEd/IsPalindrome.cs";
+        String file = "IsPalindrome.cs";
+        File fileFiled = new File(filePath);
+        File path = new File("/home/mathematist/");
+        Java.RecusrionEighth.recursionSearch(path, file);
+        assertEquals(fileFiled, Java.RecusrionEighth.recursionSearch(path, file).get(1));
     }
 }
