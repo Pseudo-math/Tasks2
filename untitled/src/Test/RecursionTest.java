@@ -95,7 +95,7 @@ class RecursionTest {
         String file = "IsPalindrome.cs";
         File fileFiled = new File(filePath);
         File path = new File("/home/mathematist/");
-        Java.RecusrionEighth.recursionSearch(path, file);
-        assertEquals(fileFiled, Java.RecusrionEighth.recursionSearch(path, file).get(1));
+        Java.RecursionEighth.recursionSearch(path, file);
+        assertEquals(fileFiled, Java.RecursionEighth.recursionSearch(path, file).get(1));
     }
 }
